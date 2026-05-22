@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalar App</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 15px;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        .btn-download {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 20px;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-download:hover {
+            background: #16a34a;
+            transform: scale(1.05);
+        }
+
+        .steps {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 14px;
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .steps ol {
+            padding-left: 18px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>📱 Instale nosso aplicativo</h1>
+
+        <p>Baixe o app oficial e aproveite todos os recursos.</p>
+
+        <!-- Botão de download -->
+        <a class="btn-download" href="atletico.apk" download>
+            Baixar APK
+        </a>
+
+        <!-- Instruções -->
+        <div class="steps">
+            <h3>Como instalar:</h3>
+            <ol>
+                <li>Clique no botão de download acima</li>
+                <li>Aguarde o arquivo baixar</li>
+                <li>Abra o arquivo APK no seu celular</li>
+                <li>Permita instalação de fontes desconhecidas</li>
+                <li>Instale e aproveite o app</li>
+            </ol>
+        </div>
+
+        <p class="footer">
+            Se tiver problemas, entre em contato com o suporte.
+        </p>
+    </div>
+
+</body>
+</html>

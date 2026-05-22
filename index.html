@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atlético Imperial - Inscrição</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      min-height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.90)),
+      url("escudo.png") center/cover no-repeat;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+      color:white;
+    }
+
+    .container{
+      width:100%;
+      max-width:1100px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      background:#0f0f0f;
+      border:2px solid #d4af37;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 0 30px rgba(212,175,55,.3);
+    }
+
+    .left{
+      background:linear-gradient(135deg,#000,#1b1b1b);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+    }
+
+    .left img{
+      width:100%;
+      max-width:420px;
+      filter:drop-shadow(0 0 20px rgba(212,175,55,.4));
+      animation:flutuar 3s infinite ease-in-out;
+    }
+
+    @keyframes flutuar{
+      0%{transform:translateY(0px);}
+      50%{transform:translateY(-10px);}
+      100%{transform:translateY(0px);}
+    }
+
+    .right{
+      padding:50px;
+    }
+
+    .title{
+      font-size:42px;
+      font-weight:bold;
+      color:#d4af37;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#ccc;
+      margin-bottom:35px;
+      line-height:1.5;
+    }
+
+    .form-group{
+      margin-bottom:20px;
+    }
+
+    label{
+      display:block;
+      margin-bottom:8px;
+      color:#d4af37;
+      font-weight:bold;
+    }
+
+    input,
+    select,
+    textarea{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:12px;
+      background:#1d1d1d;
+      color:white;
+      outline:none;
+      border:1px solid #333;
+      transition:.3s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus{
+      border-color:#d4af37;
+      box-shadow:0 0 10px rgba(212,175,55,.3);
+    }
+
+    textarea{
+      resize:none;
+      height:100px;
+    }
+
+    button{
+      width:100%;
+      padding:16px;
+      border:none;
+      border-radius:14px;
+      background:#d4af37;
+      color:black;
+      font-size:18px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{
+      transform:scale(1.02);
+      background:#f3cb4c;
+    }
+
+    .success{
+      margin-top:20px;
+      background:#1d4d2a;
+      padding:15px;
+      border-radius:10px;
+      display:none;
+    }
+
+    @media(max-width:900px){
+
+      .container{
+        grid-template-columns:1fr;
+      }
+
+      .left{
+        padding:20px;
+      }
+
+      .left img{
+        max-width:250px;
+      }
+
+      .right{
+        padding:30px;
+      }
+
+      .title{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="left">
+      <img src="escudo.png" alt="Atlético Imperial">
+    </div>
+
+    <div class="right">
+
+      <h1 class="title">Atlético Imperial</h1>
+
+      <p class="subtitle">
+        Faça sua inscrição para entrar no maior clube da região.
+        Mostre seu talento e venha fazer parte da nossa história.
+      </p>
+
+      <form id="formulario">
+
+        <div class="form-group">
+          <label>Nome completo</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Idade</label>
+          <input type="number" required>
+        </div>
+
+        <div class="form-group">
+          <label>Posição</label>
+          <select required>
+            <option value="">Selecione</option>
+            <option>Goleiro</option>
+            <option>Zagueiro</option>
+            <option>Lateral</option>
+            <option>Volante</option>
+            <option>Meio-campo</option>
+            <option>Atacante</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Telefone</label>
+          <input type="tel" required>
+        </div>
+
+        <div class="form-group">
+          <label>Mensagem</label>
+          <textarea placeholder="Fale sobre você..."></textarea>
+        </div>
+
+        <button type="submit" id="submit">
+          Fazer Inscrição
+        </button>
+
+        <div class="success" id="success">
+          Inscrição enviada com sucesso!
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const form = document.getElementById("formulario");
+    const success = document.getElementById("success");
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      success.style.display = "block";
+
+      form.reset();
+
+      setTimeout(() => {
+        success.style.display = "none";
+      }, 4000);
+    });
+
+    const btnredirect = document.getElementById("btnredirect").addEventListener("click", function(){
+      window.location.href = "apkinstall.html";
+    });
+
+  </script>
+
+</body>
+</html>
